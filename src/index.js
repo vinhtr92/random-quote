@@ -49,10 +49,27 @@ class RandomQuote extends React.Component {
 
   render() {
     const { author, quote } = this.state.itemRandom;
+    let removeSPC = author.replace(/\s/gi, "+");
 
+    let GoogleQueries = `www.google.com/search?q=${removeSPC}`;
+    let WikiQueries = `https://en.wikipedia.org/w/index.php?search=${removeSPC}`;
+    console.log(WikiQueries);
     return (
       <div>
-        <h2> {author} </h2>
+        <h2>
+          {" "}
+          {author}
+          <span>
+            <a href={GoogleQueries} target="_blank">
+              Google
+            </a>
+          </span>
+          <span>
+            <a href={WikiQueries} target="_blank">
+              Wikipedia
+            </a>
+          </span>
+        </h2>
         <div> {quote} </div>
 
         <button className="randomBtn" onClick={this.handleChange}>
