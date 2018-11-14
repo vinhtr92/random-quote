@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.randomBtn {
+  padding: 10px 15px;
+  border: none;
+  display: inline-flex;
+  border: 1px solid transparent;
+}
+
+.randomBtn:active {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
