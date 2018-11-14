@@ -51,7 +51,7 @@ class RandomQuote extends React.Component {
     const { author, quote } = this.state.itemRandom;
     let removeSPC = author.replace(/\s/gi, "+");
 
-    let GoogleQueries = `www.google.com/search?q=${removeSPC}`;
+    let GoogleQueries = `https://google.com/search?q=${removeSPC}`;
     let WikiQueries = `https://en.wikipedia.org/w/index.php?search=${removeSPC}`;
     console.log(WikiQueries);
     return (
